@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1220"
+   LastUpgradeVersion = "1410"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7AAB3E0D257E6A6E00707CF6"
-               BuildableName = "Rocket.Chat.app"
-               BlueprintName = "Rocket.Chat"
+               BuildableName = "Milchstrasse.app"
+               BlueprintName = "Milchstrasse"
                ReferencedContainer = "container:RocketChatRN.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7AAB3E0D257E6A6E00707CF6"
-            BuildableName = "Rocket.Chat.app"
-            BlueprintName = "Rocket.Chat"
+            BuildableName = "Milchstrasse.app"
+            BlueprintName = "Milchstrasse"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7AAB3E0D257E6A6E00707CF6"
-            BuildableName = "Rocket.Chat.app"
-            BlueprintName = "Rocket.Chat"
+            BuildableName = "Milchstrasse.app"
+            BlueprintName = "Milchstrasse"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
