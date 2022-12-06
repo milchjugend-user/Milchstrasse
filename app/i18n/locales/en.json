@@ -857,5 +857,14 @@
   "Team": "Team",
   "Select_Members": "Select Members",
   "Also_send_thread_message_to_channel_behavior": "Also send thread message to channel",
-  "Accounts_Default_User_Preferences_alsoSendThreadToChannel_Description": "Allow users to select the Also send to channel behavior"
+  "Accounts_Default_User_Preferences_alsoSendThreadToChannel_Description": "Allow users to select the Also send to channel behavior" ,
+
+  "Community_Profile": "My Planet",
+  "Chat_Profile_Image": "Chat Profil Image",
+  "Connect_to_milchstrasse": "Connect to Milchstrasse",
+  "Landing_title": "Milchstrasse🌈Chat",
+  "Landing_subtitle": "Ein Universum voll mit Queers",
+  "Agenda": "Agenda",
+  "Community": "Community",
+  "Channel_Directory": "Channel Directory"
 }

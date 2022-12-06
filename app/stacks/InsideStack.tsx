@@ -80,6 +80,50 @@ import {
 	ProfileStackParamList,
 	SettingsStackParamList
 } from './types';
+// CustomViews
+import CommunityProfileView from '../views/CommunityProfileView';
+import AgendaView from '../views/AgendaView';
+import CommunityView from '../views/CommunityView';
+
+// CommunityProfileStackNavigator
+const CommunityProfileStack = createStackNavigator();
+const CommunityProfileStackNavigator = () => {
+	const { theme } = React.useContext(ThemeContext);
+
+	return (
+		<CommunityProfileStack.Navigator screenOptions={{ ...defaultHeader, ...themedHeader(theme), ...StackAnimation }}>
+			<CommunityProfileStack.Screen
+				name='CommunityProfileView'
+				component={CommunityProfileView}
+				options={CommunityProfileView.navigationOptions}
+			/>
+		</CommunityProfileStack.Navigator>
+	);
+};
+
+// AgendaStackNavigator
+const AgendaStack = createStackNavigator();
+const AgendaStackNavigator = () => {
+	const { theme } = React.useContext(ThemeContext);
+
+	return (
+		<AgendaStack.Navigator screenOptions={{ ...defaultHeader, ...themedHeader(theme), ...StackAnimation }}>
+			<AgendaStack.Screen name='AgendaView' component={AgendaView} options={AgendaView.navigationOptions} />
+		</AgendaStack.Navigator>
+	);
+};
+
+// AgendaStackNavigator
+const CommunityStack = createStackNavigator();
+const CommunityStackNavigator = () => {
+	const { theme } = React.useContext(ThemeContext);
+
+	return (
+		<CommunityStack.Navigator screenOptions={{ ...defaultHeader, ...themedHeader(theme), ...StackAnimation }}>
+			<CommunityStack.Screen name='CommunityView' component={CommunityView} options={CommunityView.navigationOptions} />
+		</CommunityStack.Navigator>
+	);
+};
 
 // ChatsStackNavigator
 const ChatsStack = createStackNavigator<ChatsStackParamList>();
@@ -235,6 +279,9 @@ const DrawerNavigator = () => {
 			<Drawer.Screen name='SettingsStackNavigator' component={SettingsStackNavigator} />
 			<Drawer.Screen name='AdminPanelStackNavigator' component={AdminPanelStackNavigator} />
 			<Drawer.Screen name='DisplayPrefStackNavigator' component={DisplayPrefStackNavigator} />
+			<Drawer.Screen name='CommunityProfileStackNavigator' component={CommunityProfileStackNavigator} />
+			<Drawer.Screen name='AgendaStackNavigator' component={AgendaStackNavigator} />
+			<Drawer.Screen name='CommunityStackNavigator' component={CommunityStackNavigator} />
 		</Drawer.Navigator>
 	);
 };
