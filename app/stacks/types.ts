@@ -222,6 +222,9 @@ export type DrawerParamList = {
 	SettingsStackNavigator: NavigatorScreenParams<SettingsStackParamList>;
 	AdminPanelStackNavigator: NavigatorScreenParams<AdminPanelStackParamList>;
 	DisplayPrefStackNavigator: NavigatorScreenParams<DisplayPrefStackParamList>;
+	CommunityStackNavigator: NavigatorScreenParams<DisplayPrefStackParamList>;
+	CommunityProfileStackNavigator: NavigatorScreenParams<DisplayPrefStackParamList>;
+	AgendaStackNavigator: NavigatorScreenParams<DisplayPrefStackParamList>;
 };
 
 export type NewMessageStackParamList = {

@@ -1,4 +1,14 @@
 {
+  "Community_Profile": "My Planet",
+  "Chat_Profile_Image": "Chat Profil Image",
+  "Connect_to_milchstrasse": "Connect to Milchstrasse",
+  "Landing_title": "Milchstrasse🌈Chat",
+  "Landing_subtitle": "Ein Universum voll mit Queers",
+  "Agenda": "Agenda",
+  "Community": "Community",
+  "Channel_Directory": "Channel Directory",
+
+
   "__count__empty_rooms_will_be_removed_automatically": "{{count}} empty rooms will be deleted.",
   "__count__empty_room_will_be_removed_automatically": "{{count}} empty room will be deleted.",
   "1_person_reacted": "1 person reacted",

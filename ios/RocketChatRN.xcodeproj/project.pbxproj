@@ -279,7 +279,7 @@
 		7A610CD127ECE38100B8ABDD /* custom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = custom.ttf; sourceTree = "<group>"; };
 		7A92554528777E0100EC3DA3 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = RocketChatRN/AppDelegate.mm; sourceTree = "<group>"; };
 		7AAA749C23043B1D00F1ADE9 /* RocketChatRN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocketChatRN-Bridging-Header.h"; sourceTree = "<group>"; };
-		7AAB3E52257E6A6E00707CF6 /* Milchstrasse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milchstrasse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AAB3E52257E6A6E00707CF6 /* Rocket.Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACD4853222860DE00442C55 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		7AE10C0528A59530003593CB /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 		7E01AFB7FFC99A24DE24A9E7 /* Pods-defaults-NotificationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-NotificationService.release.xcconfig"; path = "Target Support Files/Pods-defaults-NotificationService/Pods-defaults-NotificationService.release.xcconfig"; sourceTree = "<group>"; };
@@ -546,7 +546,7 @@
 				13B07F961A680F5B00A75B9A /* Rocket.Chat Experimental.app */,
 				1EC6ACB022CB9FC300A41C61 /* ShareRocketChatRN.appex */,
 				1EFEB5952493B6640072EDC0 /* NotificationService.appex */,
-				7AAB3E52257E6A6E00707CF6 /* Milchstrasse.app */,
+				7AAB3E52257E6A6E00707CF6 /* Rocket.Chat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -685,9 +685,9 @@
 			productReference = 1EFEB5952493B6640072EDC0 /* NotificationService.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		7AAB3E0D257E6A6E00707CF6 /* Milchstrasse */ = {
+		7AAB3E0D257E6A6E00707CF6 /* Rocket.Chat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7AAB3E4F257E6A6E00707CF6 /* Build configuration list for PBXNativeTarget "Milchstrasse" */;
+			buildConfigurationList = 7AAB3E4F257E6A6E00707CF6 /* Build configuration list for PBXNativeTarget "Rocket.Chat" */;
 			buildPhases = (
 				CDFA7A6FA541A8BED7CE9EE7 /* [CP] Check Pods Manifest.lock */,
 				7AAB3E13257E6A6E00707CF6 /* Start Packager */,
@@ -707,9 +707,9 @@
 				7AAB3E0E257E6A6E00707CF6 /* PBXTargetDependency */,
 				7AAB3E10257E6A6E00707CF6 /* PBXTargetDependency */,
 			);
-			name = Milchstrasse;
+			name = Rocket.Chat;
 			productName = "Hello World";
-			productReference = 7AAB3E52257E6A6E00707CF6 /* Milchstrasse.app */;
+			productReference = 7AAB3E52257E6A6E00707CF6 /* Rocket.Chat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -780,7 +780,7 @@
 				13B07F861A680F5B00A75B9A /* RocketChatRN */,
 				1EC6ACAF22CB9FC300A41C61 /* ShareRocketChatRN */,
 				1EFEB5942493B6640072EDC0 /* NotificationService */,
-				7AAB3E0D257E6A6E00707CF6 /* Milchstrasse */,
+				7AAB3E0D257E6A6E00707CF6 /* Rocket.Chat */,
 			);
 		};
 /* End PBXProject section */
@@ -2074,7 +2074,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7AAB3E4F257E6A6E00707CF6 /* Build configuration list for PBXNativeTarget "Milchstrasse" */ = {
+		7AAB3E4F257E6A6E00707CF6 /* Build configuration list for PBXNativeTarget "Rocket.Chat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7AAB3E50257E6A6E00707CF6 /* Debug */,
