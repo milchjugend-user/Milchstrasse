@@ -236,6 +236,10 @@ class RoomActionsView extends React.Component<IRoomActionsViewProps, IRoomAction
 		event?: Function;
 	}) => {
 		const { route, event, params } = item;
+
+		const { room } = this.state;
+		const { name, t, topic } = room;
+
 		if (route) {
 			/**
 			 * TODO: params can vary too much and ts is going to be happy
@@ -244,7 +248,17 @@ class RoomActionsView extends React.Component<IRoomActionsViewProps, IRoomAction
 			// @ts-ignore
 			logEvent(events[`RA_GO_${route.replace('View', '').toUpperCase()}${params.name ? params.name.toUpperCase() : ''}`]);
 			const { navigation } = this.props;
-			navigation.navigate(route, params);
+			if (route === 'RoomInfoView') {
+				if (t === 'd') {
+					navigation.navigate('WebsiteView', { t, title: name, url: `https://app.milchjugend.ch/members/${ name }/` });
+				} else if (topic && topic.includes('Event Kanal')) {
+					navigation.navigate('WebsiteView', { t, title: name, url: `https://app.milchjugend.ch/event/${ name }/` });
+				} else {
+					navigation.navigate(route, params);
+				}
+			} else {
+				navigation.navigate(route, params);
+			}		
 		}
 		if (event) {
 			return event();

@@ -180,6 +180,9 @@ export type ChatsStackParamList = {
 		onlyAudio?: boolean;
 		videoConf?: boolean;
 	};
+	WebsiteView: {
+		title: string;
+	};
 };
 
 export type ProfileStackParamList = {

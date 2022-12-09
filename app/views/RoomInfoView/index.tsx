@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
+import WebView from 'react-native-webview';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { connect } from 'react-redux';
 import UAParser from 'ua-parser-js';
@@ -27,7 +28,6 @@ import { goRoom } from '../../lib/methods/helpers/goRoom';
 import Navigation from '../../lib/navigation/appNavigation';
 import Livechat from './Livechat';
 import Channel from './Channel';
-import Direct from './Direct';
 import styles from './styles';
 import { ChatsStackParamList } from '../../stacks/types';
 import { MasterDetailInsideStackParamList } from '../../stacks/MasterDetailStack/types';
@@ -81,6 +81,12 @@ const renderRoomTitle = ({ room, type, name, username, statusText, theme }: IGet
 		</View>
 	);
 
+const script = `
+	window.ReactNativeWebView.postMessage(
+		Math.max(document.documentElement.clientHeight, document.documentElement.scrollHeight, document.body.clientHeight, document.body.scrollHeight).toString()
+	);
+`;
+
 interface IRoomInfoViewProps {
 	navigation: CompositeNavigationProp<
 		StackNavigationProp<ChatsStackParamList, 'RoomInfoView'>,
@@ -111,6 +117,8 @@ interface IRoomInfoViewState {
 	roomUser: IUserParsed | ILivechatVisitorModified;
 	showEdit: boolean;
 	roomFromRid?: TSubscriptionModel;
+	webViewHeight: number,
+	webViewLoading: boolean,
 }
 
 class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewState> {
@@ -128,6 +136,8 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 
 	private subscriptionRoomFromRid?: Subscription;
 
+	private webview: React.Ref<WebView>;
+
 	constructor(props: IRoomInfoViewProps) {
 		super(props);
 		const room = props.route.params?.room;
@@ -139,8 +149,12 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 			room: (room || { rid: this.rid, t: this.t }) as any,
 			roomUser: roomUser || {},
 			showEdit: false,
-			roomFromRid: undefined
+			roomFromRid: undefined,
+			webViewHeight: 350,
+			webViewLoading: false
 		};
+
+		this.webview = React.createRef();
 	}
 
 	componentDidMount() {
@@ -466,16 +480,60 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 	};
 
 	renderContent = () => {
-		const { room, roomUser } = this.state;
+		const {
+			room, roomUser, webViewHeight, webViewLoading
+		} = this.state;
 
 		if (this.isDirect) {
-			return <Direct roomUser={roomUser as IUserParsed} />;
+			return (
+				<>
+					<WebView
+						source={{ uri: `https://app.milchjugend.ch/members/${ roomUser.username }/?minimal=true` }}
+						style={{ height: webViewHeight }}
+						scrollEnabled={false}
+						onMessage={this.onMessage}
+						injectedJavaScript={script}
+						onLoadStart={() => this.showSpinner()}
+						onLoad={() => this.hideSpinner()}
+						ref={this.webview}
+					/>
+					{webViewLoading && (
+						<ActivityIndicator
+							style={{
+								left: 0,
+								right: 0,
+								top: 0,
+								bottom: 0,
+								position: 'absolute',
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+							color='gray'
+							size='large'
+						/>
+					)}
+				</>
+			);
 		}
 
 		if (this.t === SubscriptionType.OMNICHANNEL) {
 			return <Livechat room={room} roomUser={roomUser as ILivechatVisitorModified} />;
 		}
 		return <Channel room={room} />;
+	};
+
+	onMessage = (e: any) => {
+		this.setState({
+			webViewHeight: Number(e.nativeEvent.data)
+		});
+	}
+
+	hideSpinner=() => {
+		this.setState({ webViewLoading: false });
+	};
+
+	showSpinner=() => {
+		this.setState({ webViewLoading: true });
 	};
 
 	render() {
