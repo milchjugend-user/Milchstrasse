@@ -84,6 +84,7 @@ import {
 import CommunityProfileView from '../views/CommunityProfileView';
 import AgendaView from '../views/AgendaView';
 import CommunityView from '../views/CommunityView';
+import WebsiteView from '../views/WebsiteView';
 
 // CommunityProfileStackNavigator
 const CommunityProfileStack = createStackNavigator();
@@ -180,6 +181,11 @@ const ChatsStackNavigator = () => {
 			<ChatsStack.Screen name='CannedResponsesListView' component={CannedResponsesListView} />
 			<ChatsStack.Screen name='CannedResponseDetail' component={CannedResponseDetail} />
 			<ChatsStack.Screen name='JitsiMeetView' component={JitsiMeetView} options={{ headerShown: false }} />
+			<ChatsStack.Screen
+				name='WebsiteView'
+				component={WebsiteView}
+				options={WebsiteView.navigationOptions}
+			/>
 		</ChatsStack.Navigator>
 	);
 };
