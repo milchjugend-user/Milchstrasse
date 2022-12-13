@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, ViewStyle } from 'react-native';
 
+import { CustomIcon } from '../CustomIcon';
 import Touch from '../Touch';
 import Avatar from '../Avatar';
 import RoomTypeIcon from '../RoomTypeIcon';
@@ -24,6 +25,8 @@ interface IDirectoryItem {
 	testID: string;
 	style?: ViewStyle;
 	rightLabel?: string;
+	userCount: number;
+	onPressMembers: () => void;
 	rid?: string;
 	teamMain?: boolean;
 }
@@ -43,6 +46,8 @@ const DirectoryItem = ({
 	testID,
 	style,
 	rightLabel,
+	userCount,
+	onPressMembers,
 	type,
 	rid,
 	teamMain
@@ -65,7 +70,18 @@ const DirectoryItem = ({
 						</Text>
 					) : null}
 				</View>
-				<DirectoryItemLabel text={rightLabel} theme={theme} />
+				{type === 'c' ? (
+					<Touch
+						onPress={() => onPressMembers()}
+						style={[styles.directoryItemMembersButton, { backgroundColor: themes[theme].backgroundColor }]}
+						testID={testID}
+					>
+						<Text style={[styles.directoryItemLabelMembers, { color: themes[theme].tintColor }]}>{userCount}</Text>
+						<CustomIcon style={[{ color: themes[theme].tintColor }]} size={20} name='team' color={themes[theme].tintColor} />
+					</Touch>
+				) : (
+					<DirectoryItemLabel text={rightLabel} theme={theme} />
+				)}
 			</View>
 		</Touch>
 	);

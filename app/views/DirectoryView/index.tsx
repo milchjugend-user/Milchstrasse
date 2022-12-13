@@ -156,6 +156,21 @@ class DirectoryView extends React.Component<IDirectoryViewProps, IDirectoryViewS
 		goRoom({ item, isMasterDetail, popToRoot: true });
 	};
 
+	goMembers = ({
+		rid, room, joined
+	}: any) => {
+		const { navigation } = this.props;
+		navigation.navigate('RoomMembersView', {
+			rid, room, joined
+		});
+	}
+
+	onPressMembers = (item: any) => {
+		this.goMembers({
+			rid: item._id, room: item, joined: item.joined
+		});
+	}
+
 	onPressItem = async (item: IServerRoom) => {
 		const { type } = this.state;
 		if (type === 'users') {
@@ -255,7 +270,8 @@ class DirectoryView extends React.Component<IDirectoryViewProps, IDirectoryViewS
 				<DirectoryItem
 					avatar={item.username}
 					description={item.username}
-					rightLabel={item.federation && item.federation.peer}
+					userCount={item.usersCount}
+					onPressMembers={() => this.onPressMembers(item)}
 					type='d'
 					{...commonProps}
 				/>
@@ -267,7 +283,8 @@ class DirectoryView extends React.Component<IDirectoryViewProps, IDirectoryViewS
 				<DirectoryItem
 					avatar={item.name}
 					description={item.name}
-					rightLabel={I18n.t('N_channels', { n: item.roomsCount })}
+					userCount={item.usersCount}
+					onPressMembers={() => this.onPressMembers(item)}
 					type={item.t}
 					teamMain={item.teamMain}
 					{...commonProps}
@@ -278,7 +295,8 @@ class DirectoryView extends React.Component<IDirectoryViewProps, IDirectoryViewS
 			<DirectoryItem
 				avatar={item.name}
 				description={item.topic}
-				rightLabel={I18n.t('N_users', { n: item.usersCount })}
+				userCount={item.usersCount}
+				onPressMembers={() => this.onPressMembers(item)}
 				type={item.t}
 				{...commonProps}
 			/>
