@@ -199,7 +199,7 @@ class Sidebar extends Component<ISidebarProps, ISidebarState> {
 				/>
 				<SidebarItem
 					text={I18n.t('Community_Profile')}
-					left={<CustomIcon name='basketball' size={20} color={themes[theme!].titleText} />}
+					left={<CustomIcon name='federation' size={20} color={themes[theme!].titleText} />}
 					onPress={() => this.sidebarNavigate('CommunityProfileStackNavigator')}
 					testID='sidebar-community-profile'
 					theme={theme!}

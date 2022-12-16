@@ -70,6 +70,9 @@ const DirectoryItem = ({
 						</Text>
 					) : null}
 				</View>
+				<DirectoryItemLabel text={rightLabel} theme={theme} />
+				{/*
+				// Inactive changes for Milchstrasse: Shortcut to memberlist for a given channel
 				{type === 'c' ? (
 					<Touch
 						onPress={() => onPressMembers()}
@@ -82,6 +85,7 @@ const DirectoryItem = ({
 				) : (
 					<DirectoryItemLabel text={rightLabel} theme={theme} />
 				)}
+				*/}
 			</View>
 		</Touch>
 	);

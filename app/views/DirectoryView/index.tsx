@@ -277,6 +277,7 @@ class DirectoryView extends React.Component<IDirectoryViewProps, IDirectoryViewS
 					description={item.username}
 					userCount={item.usersCount}
 					onPressMembers={() => this.onPressMembers(item)}
+					rightLabel={item.federation && item.federation.peer}
 					type='d'
 					{...commonProps}
 				/>
@@ -290,6 +291,7 @@ class DirectoryView extends React.Component<IDirectoryViewProps, IDirectoryViewS
 					description={item.name}
 					userCount={item.usersCount}
 					onPressMembers={() => this.onPressMembers(item)}
+					rightLabel={I18n.t('N_channels', { n: item.roomsCount })}
 					type={item.t}
 					teamMain={item.teamMain}
 					{...commonProps}
@@ -302,6 +304,7 @@ class DirectoryView extends React.Component<IDirectoryViewProps, IDirectoryViewS
 				description={item.topic}
 				userCount={item.usersCount}
 				onPressMembers={() => this.onPressMembers(item)}
+				rightLabel={I18n.t('N_users', { n: item.usersCount })}
 				type={item.t}
 				{...commonProps}
 			/>
