@@ -25,7 +25,7 @@
 	<key>IS_OFFICIAL</key>
 	<false/>
 	<key>KeychainGroup</key>
-	<string>$(AppIdentifierPrefix)ch.milchjugend.milchstrasse</string>
+	<string>$(AppIdentifierPrefix)chat.rocket.reactnative</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
