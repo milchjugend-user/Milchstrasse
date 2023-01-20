@@ -144,8 +144,12 @@
 		9FFAFBADBBBF1842B589438F /* libPods-defaults-Milchstrasse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF646460894DFA516799302 /* libPods-defaults-Milchstrasse.a */; };
 		A965681B9D9B1DB968676F54 /* libPods-defaults-NotificationService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC0A8A825375FCCDCDFEFE2 /* libPods-defaults-NotificationService.a */; };
 		D94D81FB9E10756FAA03F203 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016747EF3B9FED8DE2C9DA14 /* ExpoModulesProvider.swift */; };
-		DC4B37412914150800BA8018 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC4B37402914150800BA8018 /* GoogleService-Info.plist */; };
-		DC4B37422914150800BA8018 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC4B37402914150800BA8018 /* GoogleService-Info.plist */; };
+		DCA952F6297AEFF900E3456C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A006F13229C83B600803143 /* GoogleService-Info.plist */; };
+		DCA952F7297AEFFA00E3456C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A006F13229C83B600803143 /* GoogleService-Info.plist */; };
+		DCA952F9297AF47300E3456C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA952F8297AF47300E3456C /* GoogleService-Info.plist */; };
+		DCA952FA297AF47300E3456C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA952F8297AF47300E3456C /* GoogleService-Info.plist */; };
+		DCA952FB297AF47300E3456C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA952F8297AF47300E3456C /* GoogleService-Info.plist */; };
+		DCA952FC297AF47300E3456C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA952F8297AF47300E3456C /* GoogleService-Info.plist */; };
 		DD2BA30A89E64F189C2C24AC /* libWatermelonDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7E862283664608B3894E34 /* libWatermelonDB.a */; };
 /* End PBXBuildFile section */
 
@@ -289,7 +293,7 @@
 		AC87BFDE8CC75468C2E87328 /* Pods-defaults-RocketChatRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-RocketChatRN.release.xcconfig"; path = "Target Support Files/Pods-defaults-RocketChatRN/Pods-defaults-RocketChatRN.release.xcconfig"; sourceTree = "<group>"; };
 		B37C79D9BD0742CE936B6982 /* libc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		BA7E862283664608B3894E34 /* libWatermelonDB.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libWatermelonDB.a; sourceTree = "<group>"; };
-		DC4B37402914150800BA8018 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DCA952F8297AF47300E3456C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEC0A8A825375FCCDCDFEFE2 /* libPods-defaults-NotificationService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-defaults-NotificationService.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0786A6DBA3F9BE61BAD7002 /* Pods-defaults-NotificationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-NotificationService.debug.xcconfig"; path = "Target Support Files/Pods-defaults-NotificationService/Pods-defaults-NotificationService.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -380,7 +384,7 @@
 				7AAA749C23043B1D00F1ADE9 /* RocketChatRN-Bridging-Header.h */,
 				7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */,
 				1ED00BB02513E04400A1331F /* ReplyNotification.swift */,
-				DC4B37402914150800BA8018 /* GoogleService-Info.plist */,
+				DCA952F8297AF47300E3456C /* GoogleService-Info.plist */,
 			);
 			name = RocketChatRN;
 			sourceTree = "<group>";
@@ -797,7 +801,7 @@
 				7AE10C0628A59530003593CB /* Inter.ttf in Resources */,
 				7A006F14229C83B600803143 /* GoogleService-Info.plist in Resources */,
 				7A0D62D2242AB187006D5C06 /* LaunchScreen.storyboard in Resources */,
-				DC4B37412914150800BA8018 /* GoogleService-Info.plist in Resources */,
+				DCA952F9297AF47300E3456C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +810,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A610CD327ECE38100B8ABDD /* custom.ttf in Resources */,
+				DCA952F6297AEFF900E3456C /* GoogleService-Info.plist in Resources */,
+				DCA952FA297AF47300E3456C /* GoogleService-Info.plist in Resources */,
 				1EC6ACB722CB9FC300A41C61 /* MainInterface.storyboard in Resources */,
 				7AE10C0728A59530003593CB /* Inter.ttf in Resources */,
 			);
@@ -816,6 +822,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A610CD427ECE38100B8ABDD /* custom.ttf in Resources */,
+				DCA952F7297AEFFA00E3456C /* GoogleService-Info.plist in Resources */,
+				DCA952FB297AF47300E3456C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,7 +837,7 @@
 				7AE10C0828A59530003593CB /* Inter.ttf in Resources */,
 				7AAB3E44257E6A6E00707CF6 /* GoogleService-Info.plist in Resources */,
 				7AAB3E45257E6A6E00707CF6 /* LaunchScreen.storyboard in Resources */,
-				DC4B37422914150800BA8018 /* GoogleService-Info.plist in Resources */,
+				DCA952FC297AF47300E3456C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1659,7 +1667,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/rn-extensions-share/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
-					"$PODS_CONFIGURATION_BUILD_DIR/Firebase",
+					$PODS_CONFIGURATION_BUILD_DIR/Firebase,
 				);
 				INFOPLIST_FILE = ShareRocketChatRN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1727,7 +1735,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/rn-extensions-share/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
-					"$PODS_CONFIGURATION_BUILD_DIR/Firebase",
+					$PODS_CONFIGURATION_BUILD_DIR/Firebase,
 				);
 				INFOPLIST_FILE = ShareRocketChatRN/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
